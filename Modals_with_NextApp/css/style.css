@@ -214,7 +214,7 @@ ul {
     position:relative;
     background-color:#292c33;
     /*background-image:url(../images/01_shadow.png);*/
-    background-image:url(../images/air.jpg);
+    background-image:url(../images/air_freight.jpg);
     background-position:center;
     min-height:230px;
     background-repeat:no-repeat
@@ -836,7 +836,8 @@ ul {
 }
 
 .portfolio-section {
-    background-image:url(../images/air.jpg);
+    background-image:url(../images/air_freight.jpg);
+    background-size:cover;
 }
 
 .portfolio-section .signup-section {
