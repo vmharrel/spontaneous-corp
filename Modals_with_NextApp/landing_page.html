@@ -20,7 +20,8 @@
 	<link rel="stylesheet" href="./css/jquery.fancybox.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="./css/style.css" type="text/css">
 	<link rel="stylesheet" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" href="./css/bootstrap-lightbox.css">
+	<!--link rel="stylesheet" href="./css/bootstrap-lightbox.css"-->
+	<link rel="stylesheet" href="./css/lightbox.css">
 	<!--[if IE 7]>
 	  <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
 	<![endif]-->
@@ -63,8 +64,8 @@
 						<div class="imgbox-desc">
 							<h4>Enter Your Route</h4>
 							<p>Enter origin and destination</p>
-							<a data-toggle="lightbox" href="#demoLightbox">Open Lightbox</a>
-							<!--a data-toggle="modal" data-target="#myModal" href="#myMoal">Take a Look</a-->
+							<a href="images/OneClickAir_HomePage.png" data-lightbox="image-1" data-title="My caption">Image #1</a>
+							<!--a data-toggle="lightbox" href="#routeLightbox">Preview</a-->
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -75,7 +76,7 @@
 						<div class="imgbox-desc">
 							<h4>Select Any Air Carrier</h4>
 							<p>Choose from multiple carriers</p>
-							<!--a href="/nextapp/#">Take a Look</a-->
+							<!--a data-toggle="lightbox" href="#searchLightbox">Preview</a-->
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -86,7 +87,7 @@
 						<div class="imgbox-desc">
 							<h4>Click to Ship</h4>
 							<p>Ship your freight in 3 easy steps</p>
-							<!--a href="/nextapp/#">Take a Look</a-->
+							<!--a data-toggle="lightbox" href="#dashLightbox">Preview</a-->
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -109,32 +110,6 @@
 
 	</div>
 	<!-- /portfolio-section -->
-
-			<!-- Modal HTML -->
-			<!--div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="width: 960px; height: 600px; margin-left: 0px; left: 200px;">
-			  <div class="modal-dialog" style="/*width: 960px; height: 600px;*/">
-			    <div class="modal-content" style="/*width: 960px; height: 600px;*/">
-			        <div class="modal-body" style="/*width: 960px; height: 600px;*/">
-			            <img src="./images/OneClickAir_HomePage.png" class="img-responsive">
-			        </div>
-			    </div>
-			  </div>
-			</div-->
-			<!-- End of Modal HTML -->
-
-			<!-- Bootstrap Lightbox -->
-			<div id="demoLightbox" class="lightbox fade"  tabindex="-1" role="dialog" aria-hidden="true">
-			    <div class='lightbox-dialog'>
-			        <div class='lightbox-content'>
-			            <img src="./images/OneClickAir_HomePage.png">
-			            <div class='lightbox-caption'>
-			                Your caption here
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<!-- End of Bootstrap Lightbox -->
-
 	<!-- Footer-section -->
 	<div class="footer" style="background: #f0f4f9; font-color: #333;">
 		<div class="container">
@@ -175,6 +150,39 @@
 		</div>
 	</div>
 	<!-- /Footer-section -->
+
+			<!-- Bootstrap Lightbox -->
+			<!--div id="routeLightbox" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true" style="visibility: hidden">
+			    <div class='lightbox-dialog'>
+			        <div class='lightbox-content'>
+			            <img src="./images/OneClickAir_HomePage.png">
+			            <div class='lightbox-caption'>
+			                Enter Your Origin and Destination
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div id="searchLightbox" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true" style="visibility: hidden">
+			    <div class='lightbox-dialog'>
+			        <div class='lightbox-content'>
+			            <img src="./images/OneClickAir_Search_Results.png">
+			            <div class='lightbox-caption'>
+			                Enter Your Origin and Destination
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div id="dashLightbox" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true" style="visibility: hidden">
+			    <div class='lightbox-dialog'>
+			        <div class='lightbox-content'>
+			            <img src="./images/OneClickAir_Dashboard.png">
+			            <div class='lightbox-caption'>
+			                Enter Your Origin and Destination
+			            </div>
+			        </div>
+			    </div>
+			</div-->
+			<!-- End of Bootstrap Lightbox -->
 <!-- Javascript -->
 	<script type="text/javascript" src="./js/jquery-2.0.2.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
@@ -183,20 +191,7 @@
 	<script type="text/javascript" src="./js/appshowcase.js"></script>
 	<script type="text/javascript" src="./js/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
-	<script type="text/javascript" src="./js/bootstrap-lightbox.js"></script>
-	<script type="text/javascript">
-		function centerModal() {
-		    $(this).css('display', 'block');
-		    var $dialog = $(this).find(".modal-dialog");
-		    var offset = ($(window).height() - $dialog.height()) / 2;
-		    // Center modal vertically in window
-		    $dialog.css("margin-top", offset);
-		}
-
-		$('.modal').on('show.bs.modal', centerModal);
-		$(window).on("resize", function () {
-		    $('.modal:visible').each(centerModal);
-		});
-	</script>
+	<!--script type="text/javascript" src="./js/bootstrap-lightbox.js"></script-->
+	<script type="text/javascript" src="./js/lightbox.js"></script>
 
 </body></html>
