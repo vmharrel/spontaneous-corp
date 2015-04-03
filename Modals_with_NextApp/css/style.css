@@ -426,7 +426,7 @@ ul {
     background-image:url(../images/10_avatar3.png)
 }
 
-/*.features {
+.features {
     background-color:#292c33;
     padding-bottom:20px
 }
@@ -473,7 +473,7 @@ ul {
     font-weight:400;
     float:left;
     font-weight:100
-}*/
+}
 
 /*.video-box {
     height:280px;
@@ -502,7 +502,7 @@ ul {
     color:#fff
 }*/
 
-/*.team {
+.team {
     background-color:#292c33
 }
 
@@ -608,7 +608,7 @@ ul {
 }
 
 .team .container .team-wrapper .member-1 .avatar {
-    background-image:url(../images/08_avatar1.png)
+    background-image:url(../images/vijay.jpg)
 }
 
 .team .container .team-wrapper .member-2 {
@@ -617,7 +617,7 @@ ul {
 }
 
 .team .container .team-wrapper .member-2 .avatar {
-    background-image:url(../images/09_avatar2.png)
+    background-image:url(../images/jenny.jpg)
 }
 
 .team .container .team-wrapper .member-3 {
@@ -627,8 +627,8 @@ ul {
 }
 
 .team .container .team-wrapper .member-3 .avatar {
-    background-image:url(../images/10_avatar3.png)
-}*/
+    background-image:url(../images/justin.jpg)
+}
 
 /*.pricing .container .table-wrapper {
     margin:100px 0;
