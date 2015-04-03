@@ -940,7 +940,8 @@ ul {
     -webkit-box-shadow:none;
     box-shadow:none;
     font-weight:400;
-    background-color:#D33020
+    /*background-color:#D33020;*/
+    background-color:#34a3b3;
 }
 
 .portfolio-section .signup-section .container .signup-form input[type='submit'] span {
@@ -1036,7 +1037,8 @@ ul {
 .portfolio-section .container ul li .imgbox .imgbox-desc a {
     float:right;
     color:#ececec;
-    background-color:#e74c3c;
+    /*background-color:#e74c3c;*/
+    background-color:#34a3b3;
     padding:3px 5px;
     border-radius:4px;
     -webkit-border-radius:4px;
