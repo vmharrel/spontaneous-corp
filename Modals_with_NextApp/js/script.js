@@ -66,21 +66,9 @@ $(document).ready(function() {
                     "background-color": "rgba(216, 70, 55, 0.64)"
                 });
             } else {
-	            	$.ajaxSetup({
-	            		beforeSend: function(xhr) {
-	            			xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://www.oneclickshiplogistics.com');
-	            			xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-	            			xhr.setRequestHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-	            			xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
-	            			console.log('XHR: ' + JSON.stringify(xhr));
-	            		}
-	            	});
                 $.ajax({
                     type: "POST",
-                    url: "http://www.oneclickshiplogistics.us10.list-manage.com/subscribe/post?u=30dd04a79da8f1df4501ec370&amp;id=056ddfb38b",
-                    //url: "mail.php",
-                    headers:
-                    	{ 'Access-Control-Allow-Origin': '*' },
+                    url: "mail.php",
                     data: dataString,
                     success: function() {
                         $('.mail-input').val(
