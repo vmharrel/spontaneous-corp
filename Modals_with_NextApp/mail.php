@@ -4,13 +4,14 @@ $api_key = "aa8e22562da739afd3b81283a413a2d5-us10";
 $api_endpoint = 'https://<dc>.api.mailchimp.com/2.0';
 $method = "/lists/subscribe";
 $verify_ssl = false;
-$first_name = $_POST["first_name"];
-$last_name = $_POST["last_name"];
+$email = (empty($_POST['email'])) ? null : $_POST['email'];
+$first_name = (empty($_POST['first_name'])) ? null : $_POST['first_name'];
+$last_name = (empty($_POST['last_name'])) ? null : $_POST['last_name'];
 
 $args = array(
-                'id'                => 'b1234346',
-                'email'             => array('email'=>'davy@example.com'),
-                'merge_vars'        => array('FNAME'=>'Davy', 'LNAME'=>'Jones'),
+                'id'                => '056ddfb38b',
+                'email'             => array('email'=>$email),
+                'merge_vars'        => array('FNAME'=>$first_name, 'LNAME'=>$last_name),
                 'double_optin'      => false,
                 'update_existing'   => true,
                 'replace_interests' => false,
@@ -20,9 +21,8 @@ $args = array(
 /**
  * Create a new instance
  */
-	$this->api_key = $api_key;
-	list(, $datacentre) = explode('-', $this->api_key);
-	$this->api_endpoint = str_replace('<dc>', $datacentre, $this->api_endpoint);
+list(, $datacentre) = explode('-', $api_key);
+$api_endpoint = str_replace('<dc>', $datacentre, $api_endpoint);
 
 /**
  * Call an API method. Every request needs the API key, so that is added automatically -- you don't need to pass it in.
@@ -30,9 +30,9 @@ $args = array(
  * @param  array  $args   An array of arguments to pass to the method. Will be json-encoded for you.
  * @return array          Associative array of json decoded API response.
  */
-function call($method, $args=array(), $timeout = 10)
+function call($method, $args=array(), $timeout = 10, $api_key, $api_endpoint, $verify_ssl)
 {
-	return $this->makeRequest($method, $args, $timeout);
+	return makeRequest($method, $args, $timeout, $api_key, $api_endpoint, $verify_ssl);
 }
 
 /**
@@ -41,10 +41,10 @@ function call($method, $args=array(), $timeout = 10)
  * @param  array  $args   Assoc array of parameters to be passed
  * @return array          Assoc array of decoded result
  */
-function makeRequest($method, $args=array(), $timeout = 10)
+function makeRequest($method, $args=array(), $timeout = 10, $api_key, $api_endpoint, $verify_ssl)
 {      
-  $args['apikey'] = $this->api_key;
-  $url = $this->api_endpoint.'/'.$method.'.json';
+  $args['apikey'] = $api_key;
+  $url = $api_endpoint.'/'.$method.'.json';
   $json_data = json_encode($args);
   if (function_exists('curl_init') && function_exists('curl_setopt')){
       $ch = curl_init();
@@ -54,7 +54,7 @@ function makeRequest($method, $args=array(), $timeout = 10)
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
       curl_setopt($ch, CURLOPT_POST, true);
-      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->verify_ssl);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $verify_ssl);
       curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
       $result = curl_exec($ch);
       curl_close($ch);
@@ -75,7 +75,8 @@ function makeRequest($method, $args=array(), $timeout = 10)
 }
 
 // Make API call
-$result = call($method, $args);
+$result = call($method, $args, 10, $api_key, $api_endpoint, $verify_ssl);
 error_log(json_encode($result), 0);
+echo "\nResult: " . json_encode($result) . "\n\n";
 
 ?>

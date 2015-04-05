@@ -59,6 +59,7 @@ $(document).ready(function() {
             var atpos = x.indexOf("@");
             var dotpos = x.lastIndexOf(".");
             var email = $(".mail-input").val();
+            console.log("Mail Input Value: " + email);
             var dataString = 'email=' + email;
             if (atpos < 1 || dotpos < atpos + 2 ||
                 dotpos + 2 >= x.length) {
