@@ -65,10 +65,11 @@ $(document).ready(function() {
 			{
 			$.ajax({
 			type: "POST",
-			url: "mail.php",
+			url: "http://www.oneclickshiplogistics.us10.list-manage.com/subscribe/post?u=30dd04a79da8f1df4501ec370&amp;id=056ddfb38b",
+			//url: "mail.php",
 			data: dataString,
 				success: function(){
-					$('.mail-input').val("Done! You will get latest news about NextApp.");
+					$('.mail-input').val("Done! You will get latest news about OneClickShip.");
 					$(".mail-input").css({"background-color":"rgba(12, 162, 42, 1)"});
 					$(".mail-input").css({"color":"#fafafa"});
 				}
