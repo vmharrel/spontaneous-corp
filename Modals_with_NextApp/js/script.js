@@ -72,6 +72,7 @@ $(document).ready(function() {
 	            			xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 	            			xhr.setRequestHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 	            			xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
+	            			console.log('XHR: ' + JSON.stringify(xhr));
 	            		}
 	            	});
                 $.ajax({
