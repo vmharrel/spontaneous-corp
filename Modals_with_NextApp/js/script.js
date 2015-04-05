@@ -69,6 +69,9 @@ $(document).ready(function() {
 	            	$.ajaxSetup({
 	            		beforeSend: function(xhr) {
 	            			xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://www.oneclickshiplogistics.com');
+	            			xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+	            			xhr.setRequestHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+	            			xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
 	            		}
 	            	});
                 $.ajax({
