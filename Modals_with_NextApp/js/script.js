@@ -66,6 +66,11 @@ $(document).ready(function() {
                     "background-color": "rgba(216, 70, 55, 0.64)"
                 });
             } else {
+	            	$.ajaxSetup({
+	            		beforeSend: function(xhr) {
+	            			xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://www.oneclickshiplogistics.com');
+	            		}
+	            	});
                 $.ajax({
                     type: "POST",
                     url: "http://www.oneclickshiplogistics.us10.list-manage.com/subscribe/post?u=30dd04a79da8f1df4501ec370&amp;id=056ddfb38b",
