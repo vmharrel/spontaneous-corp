@@ -81,13 +81,14 @@ $(document).ready(function() {
                         $(".mail-input").css({
                             "color": "#fafafa"
                         });
+                        console.log("Success Reponse.");
                         console.log(response);
                     },
 						        error: function (response) {
+						        		console.log("Error Reponse.");
 						            console.log(response);
 						        }
                 });
-                console.log(xhr);
             }
             return false;
         });
