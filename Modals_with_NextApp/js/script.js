@@ -58,9 +58,14 @@ $(document).ready(function() {
             var x = $(".mail-input").val();
             var atpos = x.indexOf("@");
             var dotpos = x.lastIndexOf(".");
+            
             var email = $(".mail-input").val();
-            console.log("Mail Input Value: " + email);
+            var first_name = 'Pre-Beta';
+            var last_name = 'User';
             var dataString = 'email=' + email;
+            
+            console.log("Mail Input Value: " + email);            
+            
             if (atpos < 1 || dotpos < atpos + 2 ||
                 dotpos + 2 >= x.length) {
                 $(".mail-input").css({
@@ -68,9 +73,13 @@ $(document).ready(function() {
                 });
             } else {
                 var xhr = $.ajax({
-                    type: "GET",
-                    url: "mail.php",
-                    data: dataString,
+                    type: 'get',
+                    url: 'mail.php',
+                    data: {
+                    	'email': email,
+                    	'first_name': first_name,
+                    	'last_name': last_name
+                    },
                     success: function(response) {
                         $('.mail-input').val(
                             "Done! You will get latest news about OneClickShip."
