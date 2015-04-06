@@ -74,12 +74,9 @@ $(document).ready(function() {
             } else {
                 $.ajax({
                     type: 'POST',
-                    dataType: 'json',
                     url: 'http://www.oneclickshiplogistics.com/mail.php',
                     data: {
-                    	'email': email,
-                    	'first_name': first_name,
-                    	'last_name': last_name
+                    	'email': $(".mail-input").val()
                     },
                     success: function(data) {
                         $('.mail-input').val(
