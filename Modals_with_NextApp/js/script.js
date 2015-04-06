@@ -72,7 +72,7 @@ $(document).ready(function() {
                     "background-color": "rgba(216, 70, 55, 0.64)"
                 });
             } else {
-                var xhr = $.ajax({
+                $.ajax({
                     type: 'POST',
                     dataType: 'json',
                     url: '/mail.php',
@@ -99,7 +99,6 @@ $(document).ready(function() {
 						            console.log("Data String: " + JSON.stringify(data));
 						        }
                 });
-                console.log("XHR Object: " + JSON.stringify(xhr));
             }
             return false;
         });
