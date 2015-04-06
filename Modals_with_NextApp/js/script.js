@@ -73,14 +73,15 @@ $(document).ready(function() {
                 });
             } else {
                 var xhr = $.ajax({
-                    type: 'post',
+                    type: 'POST',
+                    dataType: 'json',
                     url: 'mail.php',
                     data: {
                     	'email': email,
                     	'first_name': first_name,
                     	'last_name': last_name
                     },
-                    success: function(response) {
+                    success: function(data) {
                         $('.mail-input').val(
                             "Done! You will get latest news about OneClickShip."
                         );
@@ -91,11 +92,11 @@ $(document).ready(function() {
                             "color": "#fafafa"
                         });
                         console.log("Success Reponse.");
-                        console.log("Data String: " + dataString);
+                        console.log("Data String: " + data);
                     },
-						        error: function (response) {
+						        error: function (data) {
 						        		console.log("Error Reponse.");
-						            console.log("Data String: " + dataString);
+						            console.log("Data String: " + data);
 						        }
                 });
                 console.log("XHR Object: " + JSON.stringify(xhr));
