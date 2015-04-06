@@ -92,11 +92,11 @@ $(document).ready(function() {
                             "color": "#fafafa"
                         });
                         console.log("Success Reponse.");
-                        console.log("Data String: " + data);
+                        console.log("Data String: " + JSON.stringify(data));
                     },
 						        error: function (data) {
 						        		console.log("Error Reponse.");
-						            console.log("Data String: " + data);
+						            console.log("Data String: " + JSON.stringify(data));
 						        }
                 });
                 console.log("XHR Object: " + JSON.stringify(xhr));
