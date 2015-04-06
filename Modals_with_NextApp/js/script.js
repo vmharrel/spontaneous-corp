@@ -68,7 +68,7 @@ $(document).ready(function() {
                 });
             } else {
                 var xhr = $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "mail.php",
                     data: dataString,
                     success: function(response) {
@@ -89,6 +89,7 @@ $(document).ready(function() {
 						            console.log("Data String: " + dataString);
 						        }
                 });
+                console.log("XHR Object: " + JSON.stringify(xhr));
             }
             return false;
         });
