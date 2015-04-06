@@ -88,12 +88,12 @@ $(document).ready(function() {
                         $(".mail-input").css({
                             "color": "#fafafa"
                         });
-                        console.log("Success Reponse.");
-                        console.log("Data String: " + JSON.stringify(data));
+                        //console.log("Success Reponse.");
+                        //console.log("Data String: " + JSON.stringify(data));
                     },
 						        error: function (data) {
-						        		console.log("Error Reponse.");
-						            console.log("Data String: " + JSON.stringify(data));
+						        		//console.log("Error Reponse.");
+						            //console.log("Data String: " + JSON.stringify(data));
 						        }
                 });
             }
