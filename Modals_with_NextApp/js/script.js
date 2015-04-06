@@ -75,7 +75,7 @@ $(document).ready(function() {
                 var xhr = $.ajax({
                     type: 'POST',
                     dataType: 'json',
-                    url: 'mail.php',
+                    url: '/mail.php',
                     data: {
                     	'email': email,
                     	'first_name': first_name,
