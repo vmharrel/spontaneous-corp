@@ -82,11 +82,11 @@ $(document).ready(function() {
                             "color": "#fafafa"
                         });
                         console.log("Success Reponse.");
-                        console.log(response);
+                        console.log("Data String: " + dataString);
                     },
 						        error: function (response) {
 						        		console.log("Error Reponse.");
-						            console.log(response);
+						            console.log("Data String: " + dataString);
 						        }
                 });
             }
