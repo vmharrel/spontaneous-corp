@@ -60,10 +60,10 @@ $(document).ready(function() {
             var dotpos = x.lastIndexOf(".");
             
             var email = $(".mail-input").val();
-            var first_name = 'Pre-Beta';
+            var first_name = 'PreBeta';
             var last_name = 'User';
             var dataString = 'email=' + email;
-            
+
             console.log("Mail Input Value: " + email);            
             
             if (atpos < 1 || dotpos < atpos + 2 ||
@@ -73,7 +73,7 @@ $(document).ready(function() {
                 });
             } else {
                 var xhr = $.ajax({
-                    type: 'get',
+                    type: 'post',
                     url: 'mail.php',
                     data: {
                     	'email': email,

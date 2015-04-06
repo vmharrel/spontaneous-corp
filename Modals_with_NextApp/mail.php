@@ -2,17 +2,17 @@
 
 $file = '/home/ubuntu/tmp/logs/mail.log';
 $current = file_get_contents($file);
-$current .= json_encode($_GET).",\n";
+$current .= json_encode($_POST).",\n";
 file_put_contents($file, $current);
-error_log($_GET);
+error_log($_POST);
 
 $api_key = "aa8e22562da739afd3b81283a413a2d5-us10";
 $api_endpoint = 'https://<dc>.api.mailchimp.com/2.0';
 $method = "/lists/subscribe";
 $verify_ssl = false;
-$email = (empty($_GET['email'])) ? null : $$_GET['email'];
-$first_name = (empty($_GET['first_name'])) ? null : $$_GET['first_name'];
-$last_name = (empty($_GET['last_name'])) ? null : $$_GET['last_name'];
+$email = (empty($_POST['email'])) ? null : $_POST['email'];
+$first_name = (empty($_POST['first_name'])) ? null : $_POST['first_name'];
+$last_name = (empty($_POST['last_name'])) ? null : $_POST['last_name'];
 
 $args = array(
                 'id'                => '056ddfb38b',
