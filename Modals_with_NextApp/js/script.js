@@ -75,7 +75,7 @@ $(document).ready(function() {
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
-                    url: '/mail.php',
+                    url: 'http://www.oneclickshiplogistics.com/mail.php',
                     data: {
                     	'email': email,
                     	'first_name': first_name,
