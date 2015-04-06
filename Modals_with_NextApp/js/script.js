@@ -67,11 +67,11 @@ $(document).ready(function() {
                     "background-color": "rgba(216, 70, 55, 0.64)"
                 });
             } else {
-                $.ajax({
+                var xhr = $.ajax({
                     type: "POST",
                     url: "mail.php",
                     data: dataString,
-                    success: function() {
+                    success: function(response) {
                         $('.mail-input').val(
                             "Done! You will get latest news about OneClickShip."
                         );
@@ -81,8 +81,13 @@ $(document).ready(function() {
                         $(".mail-input").css({
                             "color": "#fafafa"
                         });
-                    }
+                        console.log(response);
+                    },
+						        error: function (response) {
+						            console.log(response);
+						        }
                 });
+                console.log(xhr);
             }
             return false;
         });
