@@ -986,10 +986,11 @@ ul {
     float:none
 }
 
+/* hero boxes on front page */
 .portfolio-section .container ul li {
-    float:left;
-    margin-right:73px;
-    margin-top:10px
+    float: left;
+    margin-right: 55px;
+    margin-top: 10px
 }
 
 .portfolio-section .container ul li .imgbox {
