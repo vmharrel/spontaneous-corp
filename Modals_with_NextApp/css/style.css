@@ -1380,17 +1380,17 @@ ul {
     }
 
     .team .container .team-wrapper .member-1 .avatar,.hidden-section .container .flexslider .slides .avatar {
-        background-image:url(../images/08_avatar1@2x.png);
+        /*background-image:url(../images/08_avatar1@2x.png);*/
         background-repeat:no-repeat
     }
 
     .team .container .team-wrapper .member-2 .avatar,.hidden-section .container .flexslider .slides .avatar2 {
-        background-image:url(../images/09_avatar2@2x.png);
+        /*background-image:url(../images/09_avatar2@2x.png);*/
         background-repeat:no-repeat
     }
 
     .team .container .team-wrapper .member-3 .avatar,.hidden-section .container .flexslider .slides .avatar3 {
-        background-image:url(../images/10_avatar3@2x.png);
+        /*background-image:url(../images/10_avatar3@2x.png);*/
         background-repeat:no-repeat
     }
 
